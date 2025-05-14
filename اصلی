@@ -1,0 +1,11 @@
+https://github.com/genmoai/mochi.git
+https://github.com/genmoai/models
+git clone https://github.com/genmoai/models
+cd models 
+pip install uv
+uv venv .venv
+source .venv/bin/activate
+uv pip install setuptools
+uv pip install -e . --no-build-isolation 
+python3 ./demos/cli.py --model_dir weights/ --cpu_offload
+genmo.mochi_preview.pipelines
